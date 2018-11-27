@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RelationalEntitiesSeeding.Data;
+using Newtonsoft.Json;
 
 namespace RelationalEntitiesSeeding {
   public class Startup {
@@ -16,7 +17,10 @@ namespace RelationalEntitiesSeeding {
 
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services) {
-      services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+      services.AddMvc().AddJsonOptions(options => {
+        options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+      }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
       services.AddDbContext<MyDbContext>(options => {
         options.UseSqlServer(Configuration.GetConnectionString(nameof(RelationalEntitiesSeeding)));
       });
