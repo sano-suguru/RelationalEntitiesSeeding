@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RelationalEntitiesSeeding.Data;
-using RelationalEntitiesSeeding.Entities;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace RelationalEntitiesSeeding.Controllers {

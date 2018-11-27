@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using RelationalEntitiesSeeding.Data;
 using Newtonsoft.Json;
+using RelationalEntitiesSeeding.Data;
 
 namespace RelationalEntitiesSeeding {
   public class Startup {
