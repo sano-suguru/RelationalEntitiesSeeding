@@ -15,7 +15,7 @@ namespace RelationalEntitiesSeeding.Data {
         entity.Property(author => author.Name).IsRequired().HasMaxLength(1000);
         entity.HasMany(author => author.Books).WithOne(book => book.Author);
         entity.HasData(
-          new Author { AuthorId = 1, Name = "フィリップ・K・ディック", Birthday = DateTime.Parse("1928/1216") },
+          new Author { AuthorId = 1, Name = "フィリップ・K・ディック", Birthday = DateTime.Parse("1928/12/16") },
           new Author { AuthorId = 2, Name = "ジョージ・オーウェル", Birthday = DateTime.Parse("1903/06/25") }
         );
       });
