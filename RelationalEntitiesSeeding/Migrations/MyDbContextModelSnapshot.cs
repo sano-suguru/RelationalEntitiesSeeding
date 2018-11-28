@@ -28,8 +28,7 @@ namespace RelationalEntitiesSeeding.Migrations
                     b.Property<DateTime>("Birthday");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(1000);
+                        .IsRequired();
 
                     b.HasKey("AuthorId");
 
@@ -52,8 +51,7 @@ namespace RelationalEntitiesSeeding.Migrations
                     b.Property<int>("PublushYear");
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(1000);
+                        .IsRequired();
 
                     b.HasKey("BookId");
 

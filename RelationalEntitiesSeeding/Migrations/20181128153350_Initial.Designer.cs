@@ -10,7 +10,7 @@ using RelationalEntitiesSeeding.Data;
 namespace RelationalEntitiesSeeding.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20181127155656_Initial")]
+    [Migration("20181128153350_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,8 +30,7 @@ namespace RelationalEntitiesSeeding.Migrations
                     b.Property<DateTime>("Birthday");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(1000);
+                        .IsRequired();
 
                     b.HasKey("AuthorId");
 
@@ -54,8 +53,7 @@ namespace RelationalEntitiesSeeding.Migrations
                     b.Property<int>("PublushYear");
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(1000);
+                        .IsRequired();
 
                     b.HasKey("BookId");
 

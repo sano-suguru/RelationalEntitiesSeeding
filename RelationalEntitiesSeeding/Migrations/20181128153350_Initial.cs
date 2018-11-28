@@ -14,7 +14,7 @@ namespace RelationalEntitiesSeeding.Migrations
                 {
                     AuthorId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(maxLength: 1000, nullable: false),
+                    Name = table.Column<string>(nullable: false),
                     Birthday = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
@@ -28,7 +28,7 @@ namespace RelationalEntitiesSeeding.Migrations
                 {
                     BookId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Title = table.Column<string>(maxLength: 1000, nullable: false),
+                    Title = table.Column<string>(nullable: false),
                     PublushYear = table.Column<int>(nullable: false),
                     AuthorId = table.Column<int>(nullable: false)
                 },
